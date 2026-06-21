@@ -13,6 +13,8 @@ int syscall_counts[NSYSCALLS] = {0};
 int
 fetchaddr(uint64 addr, uint64 *ip)
 {
+  if(addr < PGSIZE)
+    return -1;
   struct proc *p = myproc();
   if(addr >= p->sz || addr+sizeof(uint64) > p->sz) // both tests needed, in case of overflow
     return -1;
