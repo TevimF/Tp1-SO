@@ -146,7 +146,8 @@ UPROGS=\
 	$U/_forphan\
 	$U/_dorphan\
 	$U/_getcnt\
-	$U/_testlottery
+	$U/_testlottery\
+	$U/_test_tp3
 
 
 fs.img: mkfs/mkfs README $(UPROGS)
